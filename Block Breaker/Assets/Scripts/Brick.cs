@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class Brick : MonoBehaviour {
 
 	public int maxHits;
+	public Sprite[] hitSprites;
 	private int timesHit;
 	private LevelManager levelManager;
+
 
 	// Use this for initialization
 	void Start () {
@@ -21,14 +23,19 @@ public class Brick : MonoBehaviour {
 		
 	}
 
-	void OnCollisionEnter2D (Collision2D collision)
-	{
+	void OnCollisionEnter2D (Collision2D collision) {
 		timesHit++;
 
 		if (timesHit >= maxHits) {
 			Destroy (gameObject);
+		} else {
+			LoadSprites();
 		}
-		//SimulateWin();
+	}
+
+	void LoadSprites () {
+		int spriteIndex = timesHit -1;
+		this.GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
 	}
 
 	// TODO Remove this method once we actually win!
