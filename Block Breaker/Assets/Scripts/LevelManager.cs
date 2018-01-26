@@ -7,7 +7,8 @@ public class LevelManager : MonoBehaviour {
 
 	public void LoadLevel (string name){
 		Debug.Log("Level load requested for " + name);
-		Application.LoadLevel(name);
+		//Application.LoadLevel(name);
+		SceneManager.LoadScene(name);
 	}
 
 	public void QuitRequest (){
@@ -19,5 +20,11 @@ public class LevelManager : MonoBehaviour {
 		//Application.LoadLevel(Application.loadedLevel + 1);
 		// Loadlevel is outdated, its recommended to use SceneManager
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+	}
+
+	public void BrickDestroyed () {
+		if (Brick.breakableCount <= 0) {
+			LoadNextLevel();
+		}
 	}
 }
