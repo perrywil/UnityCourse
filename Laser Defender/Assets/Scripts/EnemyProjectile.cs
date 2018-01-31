@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour {
+public class EnemyProjectile : MonoBehaviour {
 
 	public float damage = 100f;
 
@@ -15,8 +15,7 @@ public class Projectile : MonoBehaviour {
 		return damage;
 	}
 
-	public void Hit (){
+	public void HitPlayer (){
 		Destroy(gameObject);
 	}
-		
 }
