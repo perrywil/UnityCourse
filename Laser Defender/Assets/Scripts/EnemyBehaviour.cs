@@ -8,7 +8,13 @@ public class EnemyBehaviour : MonoBehaviour {
 	public float health = 150f;
 	public float EnemyBeamSpeed = 10f;
 	public float shotsPerSeconds = 0.5f;
+	public int scoreValue = 20;
 
+	private ScoreCount scoreCount;
+
+	void Start (){
+		scoreCount = GameObject.Find("Score").GetComponent<ScoreCount>();
+	}
 	void OnTriggerEnter2D (Collider2D collider) {
 		Projectile missile = collider.gameObject.GetComponent<Projectile> ();
 		if (missile) {
@@ -16,6 +22,7 @@ public class EnemyBehaviour : MonoBehaviour {
 			missile.Hit();
 			if (health <= 0) {
 				Destroy(gameObject);
+				scoreCount.ScorePoints(scoreValue);
 			}
 		}
 	}
