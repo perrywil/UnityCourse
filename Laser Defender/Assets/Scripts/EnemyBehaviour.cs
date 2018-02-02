@@ -9,6 +9,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	public float EnemyBeamSpeed = 10f;
 	public float shotsPerSeconds = 0.5f;
 	public int scoreValue = 20;
+	public AudioClip explosionSound;
 
 	private ScoreCount scoreCount;
 
@@ -23,6 +24,7 @@ public class EnemyBehaviour : MonoBehaviour {
 			if (health <= 0) {
 				Destroy(gameObject);
 				scoreCount.ScorePoints(scoreValue);
+				AudioSource.PlayClipAtPoint(explosionSound, transform.position);
 			}
 		}
 	}
