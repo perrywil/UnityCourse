@@ -4,7 +4,10 @@ using UnityEngine;
 using UnityEngine.UI; // added to get GetComponent<Text>();
 
 public class ScoreCount : MonoBehaviour {
-	public int score = 0;
+	//changed to static so it keeps the score in the ScoreCount even when there is no ScoreCount object,
+	// it stores it in a template instead of a instance.
+	//
+	public static int score = 0;
 	private Text myText;
 
 	// Use this for initialization
@@ -20,8 +23,7 @@ public class ScoreCount : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	public void Reset () {
+	public static void Reset () {
 		score = 0;
-		myText.text = score.ToString();
 	}
 }

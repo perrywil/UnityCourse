@@ -16,15 +16,20 @@ public class EnemyBehaviour : MonoBehaviour {
 	void Start (){
 		scoreCount = GameObject.Find("Score").GetComponent<ScoreCount>();
 	}
+
+	void Die (){
+		Destroy(gameObject);
+		scoreCount.ScorePoints(scoreValue);
+		AudioSource.PlayClipAtPoint(explosionSound, transform.position);
+	}
+
 	void OnTriggerEnter2D (Collider2D collider) {
 		Projectile missile = collider.gameObject.GetComponent<Projectile> ();
 		if (missile) {
 			health -= missile.GetDamage ();
 			missile.Hit();
 			if (health <= 0) {
-				Destroy(gameObject);
-				scoreCount.ScorePoints(scoreValue);
-				AudioSource.PlayClipAtPoint(explosionSound, transform.position);
+				Die();
 			}
 		}
 	}
