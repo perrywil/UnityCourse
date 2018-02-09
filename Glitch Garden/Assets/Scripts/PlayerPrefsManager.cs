@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class PlayerPrefsManager : MonoBehaviour {
 
 	const string MASTER_VOLUME_KEY = "master_volume";
 	const string DIFFICULTY_KEY = "difficulty";
 	const string LEVEL_KEY = "level_unlocked_"; // level_unlocked_1 or level_unlocked_2
 
 	public static void SetMasterVolume (float volume){
-		if (volume > 0f && volume < 1f) {
+		if (volume >= 0f && volume <= 1f) {
 			PlayerPrefs.SetFloat (MASTER_VOLUME_KEY, volume);
 		} else {
 			Debug.LogError ("Master volume out of range");
@@ -22,7 +22,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	}
 
 	public static void SetDifficulty (float difficulty){
-		if (difficulty >= 0f && difficulty <= 1f) {
+		if (difficulty >= 1f && difficulty <= 3f) {
 			PlayerPrefs.SetFloat (DIFFICULTY_KEY, difficulty);
 		} else {
 			Debug.LogError ("difficulty out of range");

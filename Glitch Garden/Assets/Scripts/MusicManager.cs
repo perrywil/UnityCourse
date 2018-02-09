@@ -29,6 +29,13 @@ public class MusicManager : MonoBehaviour {
 		}
 	}
 
+	public void ChangeVolume (float volume){
+		if (volume > 0f && volume < 1f) {
+			audioSource.volume = volume;
+		} else {
+			Debug.LogError ("Master volume out of range");
+		}
+	}
 
 	// Update is called once per frame
 	void Update () {
