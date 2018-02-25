@@ -18,8 +18,7 @@ public class Lizard : MonoBehaviour {
 	void Update () {
 	}
 
-	void OnTriggerEnter2D (Collider2D collider)
-	{
+	void OnTriggerEnter2D (Collider2D collider) {
 		GameObject obj = collider.gameObject;
 
 		if (obj.GetComponent<Defender> ()) {
