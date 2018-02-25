@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Stone : MonoBehaviour {
 
+		//Only used as a tag!!
+
+
 	// Use this for initialization
 	void Start () {
 		
