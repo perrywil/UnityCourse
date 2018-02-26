@@ -26,7 +26,7 @@ public class Attacker : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (){
-		Debug.Log(name + "has triggered");
+		//Debug.Log(name + "has triggered");
 	}
 
 	public void setSpeed (float speed) {
@@ -35,7 +35,7 @@ public class Attacker : MonoBehaviour {
 
 	// Called from the animator at the time of actuall attack
 	public void StrikeCurrentTarget (float damage) {
-		Debug.Log (name + " is making damage " + damage);
+		//Debug.Log (name + " is making damage " + damage);
 		if (currentTarget) {
 			Health health = currentTarget.GetComponent<Health> ();
 			if (health) {
