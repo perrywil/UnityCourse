@@ -5,6 +5,7 @@ using UnityEngine;
 public class Attacker : MonoBehaviour {
 
 	[Range (-1f, 1.5f)] public float currentSpeed;
+	[Tooltip ("Average number of seconds between appearances")] public float seenEverySeconds;
 	private GameObject currentTarget;
 	private Animator anim;
 
@@ -47,4 +48,5 @@ public class Attacker : MonoBehaviour {
 	public void Attack (GameObject obj){
 		currentTarget = obj;
 	}
+
 }
