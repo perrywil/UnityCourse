@@ -28,8 +28,7 @@ public class Spawner : MonoBehaviour {
 
 
 
-	bool isTimeToSpawn (GameObject attackerGameObject)
-	{
+	bool isTimeToSpawn (GameObject attackerGameObject) {
 		Attacker attacker = attackerGameObject.GetComponent<Attacker> ();
 
 		//Spawn this line as often as often is marked in attacker seenEvery Seconds
@@ -47,8 +46,6 @@ public class Spawner : MonoBehaviour {
 		} else {
 			return false;
 		}
-
-		return true;
 	}
 
 }
