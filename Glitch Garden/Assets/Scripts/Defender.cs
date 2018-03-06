@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class Defender : MonoBehaviour {
 
-
-	//Only used as a tag!!
+	private StarDisplay starDisplay;
 
 	// Use this for initialization
 	void Start () {
+		starDisplay = GameObject.FindObjectOfType<StarDisplay>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+	public void AddStars (int amount) {
+		starDisplay.AddStars(amount);
+
+	}
+
 
 	void OnTriggerEnter2D (){
 		//Debug.Log (name + "has triggered");
