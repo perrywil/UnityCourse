@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Defender : MonoBehaviour {
 
+	public int starCost = 100;
+
 	private StarDisplay starDisplay;
 
 	// Use this for initialization
@@ -22,7 +24,4 @@ public class Defender : MonoBehaviour {
 	}
 
 
-	void OnTriggerEnter2D (){
-		//Debug.Log (name + "has triggered");
-	}
 }

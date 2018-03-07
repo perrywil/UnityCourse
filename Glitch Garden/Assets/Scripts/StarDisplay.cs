@@ -6,13 +6,15 @@ using UnityEngine.UI;
 [RequireComponent (typeof(Text))]
 public class StarDisplay : MonoBehaviour {
 
-	private Text starAmount;
-	private int stars = 0;
+	public enum Status {SUCCESS, FAILURE};
 
+	private Text starAmount;
+	private int stars = 100;
 
 	// Use this for initialization
 	void Start () {
 		starAmount = GetComponent<Text>();
+		UpdateDisplay ();
 	}
 	
 	// Update is called once per frame
@@ -26,9 +28,14 @@ public class StarDisplay : MonoBehaviour {
 	 UpdateDisplay();
 	}
 
-	void UseStars (int amount) {
-		stars -= amount;
-		UpdateDisplay();
+	public Status UseStars (int amount) {
+		if (stars >= amount) {
+			stars -= amount;
+			UpdateDisplay ();
+			return Status.SUCCESS;
+		}
+		// no need to use else{}
+		return Status.FAILURE;
 	}
 
 
