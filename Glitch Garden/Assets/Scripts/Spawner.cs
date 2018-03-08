@@ -41,6 +41,9 @@ public class Spawner : MonoBehaviour {
 		// if the value is above 1 we spawn an attacker if not we don't spawn
 		float threshold = spawnsPerSecond * Time.deltaTime / 5;
 
+		// can be made more compact like this: 
+		// return (Random.value < threshold);
+
 		if (Random.value < threshold) {
 			return true;
 		} else {

@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,7 +42,7 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 926
-  m_MinSize: {x: 683, y: 492}
+  m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
   controlID: 49
@@ -89,8 +89,8 @@ MonoBehaviour:
     y: 0
     width: 376
     height: 501
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -122,7 +122,7 @@ MonoBehaviour:
   - {fileID: 19}
   - {fileID: 13}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -207,7 +207,7 @@ MonoBehaviour:
     y: 0
     width: 1518
     height: 926
-  m_MinSize: {x: 406, y: 492}
+  m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
   controlID: 50
@@ -231,8 +231,8 @@ MonoBehaviour:
     y: 0
     width: 1518
     height: 501
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
   controlID: 51
 --- !u!114 &11
@@ -328,11 +328,11 @@ MonoBehaviour:
     - {fileID: 1107197958777735586, guid: f65bcc8fa75cba1469585099258116d0, type: 2}
     - {fileID: 1107495901264035962, guid: eded341cdcbc2b5479990fd361a7b9c7, type: 2}
     m_ValueSerializationHelper:
-    - {x: 859.60004, y: 102.40001}
+    - {x: 859.60004, y: 222.40001}
     - {x: 859.60004, y: 182.40001}
     - {x: 859.60004, y: 122.40001}
     - {x: 859.60004, y: 242.40002}
-    - {x: 859.60004, y: 122.40001}
+    - {x: 859.60004, y: 120}
     - {x: 859.60004, y: 122.40001}
     - {x: 859.60004, y: 226.20001}
     - {x: 631.2001, y: 95.80002}
@@ -388,19 +388,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/_Scenes
+    - Assets/Prefabs/attackers
   m_ViewMode: 1
   m_StartGridSize: 82
   m_LastFolders:
-  - Assets/_Scenes
+  - Assets/Prefabs/attackers
   m_LastFoldersGridSize: 82
   m_LastProjectPath: C:\Users\William\Documents\GitHub\repo\UnityCourse\Glitch Garden
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 1}
-    m_SelectedIDs: 90270000
-    m_LastClickedID: 10128
-    m_ExpandedIDs: 00000000de240000e6260000c028000000ca9a3bffffff7f
+    m_SelectedIDs: 7a270000
+    m_LastClickedID: 10106
+    m_ExpandedIDs: 00000000e0240000e8260000c228000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -428,7 +428,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000de240000e6260000c0280000
+    m_ExpandedIDs: 00000000e0240000e8260000c2280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -544,9 +544,9 @@ MonoBehaviour:
     height: 480
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 16a7feff5ea7feffaaabfeffe8adfefff4affeff24b2feffe4fbffff000000006c2900004c340000
+    m_SelectedIDs: baebfdff
+    m_LastClickedID: -136262
+    m_ExpandedIDs: e4fbffff00000000622900009229000096290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -601,9 +601,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.811333, y: 2.855123, z: 0.5}
+    m_Target: {x: 5.3489738, y: 3.9244516, z: 0.49902344}
     speed: 2
-    m_Value: {x: 5.811333, y: 2.855123, z: 0.5}
+    m_Value: {x: 5.3489738, y: 3.9244516, z: 0.49902344}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -630,9 +630,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.8973813
+    m_Target: 3.5233638
     speed: 2
-    m_Value: 7.8973813
+    m_Value: 3.5233638
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -712,7 +712,7 @@ MonoBehaviour:
       width: 1907.0833
       height: 775.90466
     m_MinimalGUI: 1
-  m_defaultScale: 1
+  m_defaultScale: 0.57875
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 1138, y: 480}
