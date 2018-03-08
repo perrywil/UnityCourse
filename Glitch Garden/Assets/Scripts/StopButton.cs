@@ -17,8 +17,6 @@ public class StopButton : MonoBehaviour {
 	}
 
 	void OnMouseDown () {
-
 		levelManager.LoadLevel("01 a Start");
-
 	}
 }
