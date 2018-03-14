@@ -12,6 +12,12 @@ public class DragLaunch : MonoBehaviour {
 	void Start () {
         ball = GetComponent<Ball>();
 	}
+
+    public void MoveStart (float amount) {
+        if (! ball.inPlay) {
+            ball.transform.Translate (new Vector3 (amount, 0, 0));
+        }
+    }
 	
 	public void DragStart() {
         // Capture time & position of drag start
@@ -25,7 +31,7 @@ public class DragLaunch : MonoBehaviour {
         endTime = Time.time;
 
         float dragDuration = endTime - startTime;
-
+        // variables state that when mouse moves up(y) ball moves deep(z), ball and mouse will move sidways equally(x)
         float launchSpeedx = (dragEnd.x - dragStart.x) / dragDuration;
         float launshSpeedz = (dragEnd.y - dragStart.y) / dragDuration;
 
