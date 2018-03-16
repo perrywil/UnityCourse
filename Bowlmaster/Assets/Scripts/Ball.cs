@@ -9,12 +9,14 @@ public class Ball : MonoBehaviour {
 
     private Rigidbody rigidBody;
     private AudioSource audioSource;
+    private Vector3 ballStartPos;
+   
 
 	// Use this for initialization
 	void Start () {
         rigidBody = GetComponent<Rigidbody>();
         rigidBody.useGravity = false;
-
+        ballStartPos = transform.position;
         //Launch(launchVelocity);
     }
 
@@ -27,8 +29,14 @@ public class Ball : MonoBehaviour {
         audioSource.Play();
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
+    public void Reset() {
+        Debug.Log("reset the ball");
+        inPlay = false;
+        transform.position = ballStartPos;
+        rigidBody.velocity = Vector3.zero;
+        rigidBody.angularVelocity = Vector3.zero;
+        rigidBody.useGravity = false;
+    }
+
+
 }

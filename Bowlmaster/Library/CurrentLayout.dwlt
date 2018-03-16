@@ -42,8 +42,8 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 926
-  m_MinSize: {x: 681, y: 342}
-  m_MaxSize: {x: 12006, y: 8042}
+  m_MinSize: {x: 679, y: 321}
+  m_MaxSize: {x: 12004, y: 8021}
   vertical: 0
   controlID: 111
 --- !u!114 &3
@@ -64,8 +64,8 @@ MonoBehaviour:
     y: 0
     width: 403
     height: 926
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -114,8 +114,8 @@ MonoBehaviour:
     y: 520
     width: 1517
     height: 406
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 14}
@@ -207,10 +207,10 @@ MonoBehaviour:
     y: 0
     width: 1517
     height: 926
-  m_MinSize: {x: 404, y: 342}
-  m_MaxSize: {x: 8004, y: 8042}
+  m_MinSize: {x: 404, y: 321}
+  m_MaxSize: {x: 8004, y: 8021}
   vertical: 1
-  controlID: 11
+  controlID: 53
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 12
+  controlID: 54
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -402,7 +402,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: e4270000
     m_LastClickedID: 10212
-    m_ExpandedIDs: 0000000084270000f4270000002800001c28000000ca9a3bffffff7f
+    m_ExpandedIDs: 0000000084270000f4270000002800001c280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -548,23 +548,23 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a8280000
-    m_LastClickedID: 10408
-    m_ExpandedIDs: 84fbffff90fbffff9efbffff00000000b4280000ce280000
+    m_SelectedIDs: f2280000
+    m_LastClickedID: 10482
+    m_ExpandedIDs: 9efbffff00000000d4280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: PinSetter
-      m_OriginalName: PinSetter
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 10446
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -601,14 +601,14 @@ MonoBehaviour:
     height: 499
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 332.96514283832613
+  lastFramingTime: 153.90194338469593
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 59.433235, y: 63.00866, z: 1800.2352}
+    m_Target: {x: 31.434982, y: 77.68843, z: 66.1397}
     speed: 2
-    m_Value: {x: 59.433235, y: 63.00866, z: 1800.2352}
+    m_Value: {x: 31.434982, y: 77.68843, z: 66.1397}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -632,13 +632,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.12888514, y: 0.29252562, z: -0.0398248, w: -0.94669497}
+    m_Target: {x: -0.16273665, y: -0.06389762, z: 0.010562023, w: -0.98454165}
     speed: 2
-    m_Value: {x: -0.12888514, y: 0.29252562, z: -0.0398248, w: -0.94669497}
+    m_Value: {x: -0.16273667, y: -0.063897625, z: 0.010562024, w: -0.9845417}
   m_Size:
-    m_Target: 111.10857
+    m_Target: 154.08171
     speed: 2
-    m_Value: 111.10857
+    m_Value: 154.08171
   m_Ortho:
     m_Target: 0
     speed: 2

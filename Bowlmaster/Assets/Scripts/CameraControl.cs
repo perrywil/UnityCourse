@@ -18,7 +18,7 @@ public class CameraControl : MonoBehaviour {
 	void Update () {
         // the transform of the camera changes as the transform of the ball
         // making the camera move towards the pins with the ball
-        if (transform.position.z <= 1829f) { // in fron of head pin
+        if (ball.transform.position.z <= 1829f) { // in fron of head pin
             transform.position = ball.transform.position + offset;
         }
         
