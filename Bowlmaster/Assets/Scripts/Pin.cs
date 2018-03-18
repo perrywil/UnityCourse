@@ -2,55 +2,56 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pin : MonoBehaviour {
+public class Pin : MonoBehaviour
+{
 
-    public float standingThreshold;
+    public float standingThreshold = 3f;
+    public float distToRaise = 40f;
 
-	// Use this for initialization
-	void Start () {
-        
+    private Rigidbody rigidBody;
+
+    // Use this for initialization
+    void Start()
+    {
+        rigidBody = GetComponent<Rigidbody>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-        //print(name + IsStanding());
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 
-    public bool IsStanding() {
-        // old code for IsStanding but since pins shake it does not return true:
+    public bool IsStanding()
+    {
         Vector3 rotationInEuler = transform.rotation.eulerAngles;
 
-        //Mathf.Abs returns an absolute value -3 = 3 so it doesnt matter where the pin tilts
         float tiltInX = Mathf.Abs(270 - rotationInEuler.x);
         float tiltInZ = Mathf.Abs(rotationInEuler.z);
 
-            if (tiltInX<standingThreshold && tiltInZ<standingThreshold)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+        if (tiltInX < standingThreshold && tiltInZ < standingThreshold)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
+    public void RaiseIfStanding()
+    {
+        if (IsStanding())
+        {
+            rigidBody.useGravity = false;
+            transform.Translate(new Vector3(0, distToRaise, 0), Space.World);
+        }
+    }
 
-
-
-    // checks the angle value, and if it is 180 degrees or greater, I subtract it from 360
-
-    //float tiltX = (transform.eulerAngles.x < -180f) ? transform.eulerAngles.x : -90 - transform.eulerAngles.x;
-    //float tiltZ = (transform.eulerAngles.z < 180f) ? transform.eulerAngles.z : 360 - transform.eulerAngles.z;
-
-    //  if (tiltX > standingThreshold || tiltZ > standingThreshold) {
-    //      return false;
-    //  } else {
-    //      return true;
-    //  } 
-
-
-
-
-
+    public void Lower()
+    {
+        transform.Translate(new Vector3(0, -distToRaise, 0), Space.World);
+        rigidBody.useGravity = true;
+    }
 
 }
