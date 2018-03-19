@@ -8,6 +8,7 @@ public class PinSetter : MonoBehaviour
     public int lastStandingCount = -1;
     public Text standingDisplay;
     public float distanceToRaise = 40f;
+    public GameObject pinSet;
 
     private Ball ball;
     private float lastChangeTime;
@@ -51,6 +52,7 @@ public class PinSetter : MonoBehaviour
     public void RenewPins()
     {
         Debug.Log("Renewing pins");
+        Instantiate(pinSet, new Vector3(0, 30, 1829), Quaternion.identity);// Quaternion.identity is for no rotation
     }
 
     void CheckStanding()
