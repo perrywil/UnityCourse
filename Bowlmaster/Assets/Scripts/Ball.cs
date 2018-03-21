@@ -37,6 +37,4 @@ public class Ball : MonoBehaviour {
         rigidBody.angularVelocity = Vector3.zero;
         rigidBody.useGravity = false;
     }
-
-
 }
