@@ -22,26 +22,37 @@ public class ActionMaster { // this class is for test purposes and we do not nee
         }
 
         //Handle last-frame special cases
-        if (bowl >= 19 && Bowl21Awarded())
+        if (bowl >= 19 && pins == 10)
         {
-            bowl += 1;
+            bowl ++;
             return Action.Reset;
-        } else if (bowl == 20 && !Bowl21Awarded())
+        } else if (bowl == 20)
         {
+            bowl++;
+            if (bowls[19 - 1] == 10 && bowls[20 - 1] != 10)
+            {
+                return Action.Tidy;
+            } else if ((bowls[19 - 1] + bowls[20 - 1]) % 10 == 0)
+            {
+                return Action.Reset;
+            } else if (Bowl21Awarded())
+            {
+                return Action.Tidy;
+            } else {
             return Action.EndGame;
+            }
         }
-
-        if (pins == 10) {
-            bowl += 2;
-            return Action.EndTurn;
-        }
-        // other behaviur here
 
         //if first bowl of frame, return Action.Tidy;
-        if (bowl % 2 != 0) { //Mid frame (or last frame)
-            bowl += 1;
-            return Action.Tidy;
-        } else if(bowl % 2 == 0){ //End of frame
+        if (bowl % 2 != 0) { //First bowl of frame
+            if (pins == 10) {
+                bowl += 2;
+                return Action.EndTurn;
+            } else { 
+                bowl += 1;
+                return Action.Tidy;
+            }
+        } else if(bowl % 2 == 0){ //Second bowl of frame
             bowl += 1;
             return Action.EndTurn;
         }
