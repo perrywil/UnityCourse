@@ -3,18 +3,17 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class PinSetter : MonoBehaviour
-{
-    public int lastStandingCount = -1;
+public class PinSetter : MonoBehaviour {
     public Text standingDisplay;
     public GameObject pinSet;
+    public bool ballOutOfPlay = false;
+    private int lastSettledCount = 10; // TODO make private
 
     private Ball ball;
     private float lastChangeTime;
-    public int lastSettledCount = 10; // TODO make private
-    private bool ballEnteredBox = false;
-    private ActionMaster actionMaster = new ActionMaster();
+    private int lastStandingCount = -1;
     private Animator animator;
+    private ActionMaster actionMaster = new ActionMaster(); // We need action master here as we only want 1 instance
 
     // Use this for initialization
     void Start() {
@@ -27,9 +26,10 @@ public class PinSetter : MonoBehaviour
     {
         standingDisplay.text = CountStanding().ToString();
 
-        if (ballEnteredBox)
+        if (ballOutOfPlay)
         {
             UpdateStandingCountAndSettle();
+            standingDisplay.color = Color.red;
         }
     }
 
@@ -99,7 +99,7 @@ public class PinSetter : MonoBehaviour
 
         ball.Reset();
         lastStandingCount = -1; // Indicates pins have settled, and ball not back in box
-        ballEnteredBox = false;
+        ballOutOfPlay = false;
         standingDisplay.color = Color.green;
     }
 
@@ -116,17 +116,5 @@ public class PinSetter : MonoBehaviour
         }
 
         return standing;
-    }
-
-    void OnTriggerEnter(Collider collider)
-    {
-        GameObject thingHit = collider.gameObject;
-
-        // Ball enters play box
-        if (thingHit.GetComponent<Ball>())
-        {
-            ballEnteredBox = true;
-            standingDisplay.color = Color.red;
-        }
     }
 }

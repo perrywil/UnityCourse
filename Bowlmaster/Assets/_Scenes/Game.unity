@@ -608,9 +608,63 @@ Transform:
   m_Children:
   - {fileID: 1526173690}
   - {fileID: 946648134}
+  - {fileID: 810840608}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &810840607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 810840608}
+  - component: {fileID: 810840610}
+  - component: {fileID: 810840609}
+  m_Layer: 0
+  m_Name: Lane Box
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &810840608
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 810840607}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 61.3, z: 903}
+  m_LocalScale: {x: 120, y: 120, z: 1791.2}
+  m_Children: []
+  m_Father: {fileID: 601932261}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &810840609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 810840607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eabbd282857136540928ebdac589fb8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &810840610
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 810840607}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &946648133
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,8 +746,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -199.45}
-  m_SizeDelta: {x: -400, y: -398.9}
+  m_AnchoredPosition: {x: 0, y: -267.3}
+  m_SizeDelta: {x: -400, y: -534.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1150009428
 MonoBehaviour:
@@ -879,6 +933,7 @@ MonoBehaviour:
   lastStandingCount: -1
   standingDisplay: {fileID: 1405630754}
   pinSet: {fileID: 1994649638115018, guid: 06c41193c5f0f934ea944a8f0d26cd8b, type: 2}
+  ballOutOfPlay: 0
   lastSettledCount: 10
 --- !u!65 &1357577089
 BoxCollider:
