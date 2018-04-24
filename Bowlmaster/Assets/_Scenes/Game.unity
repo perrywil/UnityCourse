@@ -484,30 +484,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114054402959336354, guid: 0805b32a0cda92b48a087863b9ba19f0,
-        type: 2}
-      propertyPath: launchVelocity.z
-      value: 500
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0805b32a0cda92b48a087863b9ba19f0, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &453558496 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1853769121961902, guid: 0805b32a0cda92b48a087863b9ba19f0,
+--- !u!114 &453558497 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114940217614579622, guid: 0805b32a0cda92b48a087863b9ba19f0,
     type: 2}
   m_PrefabInternal: {fileID: 334582845}
---- !u!114 &453558497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 453558496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f3182240c9c61f4581928aba94096e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &485167188
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,11 +915,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a545bd1c4fb129c4bb62c7d0994b7c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastStandingCount: -1
   standingDisplay: {fileID: 1405630754}
   pinSet: {fileID: 1994649638115018, guid: 06c41193c5f0f934ea944a8f0d26cd8b, type: 2}
   ballOutOfPlay: 0
-  lastSettledCount: 10
 --- !u!65 &1357577089
 BoxCollider:
   m_ObjectHideFlags: 0

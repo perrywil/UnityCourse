@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54493684428882454}
   - component: {fileID: 114054402959336354}
   - component: {fileID: 82598172388507638}
+  - component: {fileID: 114940217614579622}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -59,7 +60,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e57ea3989dc7f4e50bd55982de841177, type: 2}
+  - {fileID: 2100000, guid: 89db87e4d8a384c1da9d8ce75612f3a4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,7 +101,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!82 &82598172388507638
 AudioSource:
   m_ObjectHideFlags: 1
@@ -168,7 +169,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -192,7 +193,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a75125f90c4b854db5597d9e432c437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchVelocity: {x: 0, y: 0, z: 1500}
+  launchVelocity: {x: 0, y: 0, z: 500}
+  inPlay: 0
+--- !u!114 &114940217614579622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1853769121961902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3182240c9c61f4581928aba94096e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135509042280531444
 SphereCollider:
   m_ObjectHideFlags: 1
