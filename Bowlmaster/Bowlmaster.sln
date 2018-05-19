@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bowlmaster", "Bowlmaster.csproj", "{7B9122B3-0979-D482-BAD7-F023B076DF58}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bowlmaster.Editor", "Bowlmaster.Editor.csproj", "{BE5EBE9C-8291-0488-E1D2-FBED334C8DFE}"
