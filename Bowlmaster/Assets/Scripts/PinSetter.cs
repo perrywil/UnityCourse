@@ -8,7 +8,7 @@ public class PinSetter : MonoBehaviour {
     public GameObject pinSet;
  
     private Animator animator;
-    private ActionMaster actionMaster = new ActionMaster(); // We need action master here as we only want 1 instance
+    private ActionMasterOld actionMaster = new ActionMasterOld(); // We need action master here as we only want 1 instance
     private PinCounter pinCounter;
 
     // Use this for initialization
@@ -47,24 +47,24 @@ public class PinSetter : MonoBehaviour {
     }
 
 
-    public void PerformAction(ActionMaster.Action action)
+    public void PerformAction(ActionMasterOld.Action action)
     {
-        if (action == ActionMaster.Action.Tidy)
+        if (action == ActionMasterOld.Action.Tidy)
         {
             animator.SetTrigger("tidyTrigger");
         }
-        else if (action == ActionMaster.Action.EndTurn)
+        else if (action == ActionMasterOld.Action.EndTurn)
         {
             animator.SetTrigger("resetTrigger");
             pinCounter.Reset();
             
         }
-        else if (action == ActionMaster.Action.Reset)
+        else if (action == ActionMasterOld.Action.Reset)
         {
             animator.SetTrigger("resetTrigger");
             pinCounter.Reset();
         }
-        else if (action == ActionMaster.Action.EndGame)
+        else if (action == ActionMasterOld.Action.EndGame)
         {
             throw new UnityException("Don't know how to handle end game yet");
         }
