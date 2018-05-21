@@ -7,17 +7,6 @@ public class ScoreDisplay : MonoBehaviour {
 
     public Text[] rollTexts, frameTexts;
 
-	// Use this for initialization
-	void Start () {
-        //rollTexts[0].text = "X";
-        //frameTexts[0].text = "0";
-    }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     public void FillRolls(List<int> rolls)
     {
         string ScoresString = FormatRolls(rolls);
@@ -42,19 +31,18 @@ public class ScoreDisplay : MonoBehaviour {
 
         for (int i = 0; i < rolls.Count; i++)
         {
-            int box = output.Length + 1;                                            // Score box 1 to 21
+            int box = output.Length + 1;                                                // Score box 1 to 21
 
-            if (rolls[i] == 0)                                                      // Always enter 0 as -
+            if (rolls[i] == 0)                                                          // Always enter 0 as -
             {
                 output += "-";
-            } else if (box % 2 == 0 && rolls[i - 1] + rolls[i] == 10)               // SPARE anywhere
-
+            } else if ((box % 2 == 0 || box == 21) && rolls[i - 1] + rolls[i] == 10)   // SPARE anywhere
                 {
                     output += "/";
-                } else if (box >= 19 && rolls[i] == 10)                             // STRIKE in frame 10
+                } else if (box >= 19 && rolls[i] == 10)                                 // STRIKE in frame 10
                 {
                     output += "X";
-                } else if (rolls[i] == 10)                                          // STRIKE in frame 1-9
+                } else if (rolls[i] == 10)                                              // STRIKE in frame 1-9
                     {
                         output += "X ";
                     } else

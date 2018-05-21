@@ -68,4 +68,23 @@ public class ScoreDisplayTest {
         string rollsString = "-";
         Assert.AreEqual(rollsString, ScoreDisplay.FormatRolls(rolls.ToList()));
     }
+
+    [Test]
+    public void T07Bowl010()
+    {
+        int[] rolls = { 0, 10 };
+        string rollsString = "-/";
+        Assert.AreEqual(rollsString, ScoreDisplay.FormatRolls(rolls.ToList()));
+    }
+
+    // http://brownswick.com/wp-content/uploads/2012/06/OpenBowlingScores-6-12-12.jpg
+    [Category("Verification")]
+    [Test]
+    public void TG03GoldenCopyC2of3()
+    {
+        int[] rolls = { 10, 10, 10, 10, 9, 0, 10, 10, 10, 10, 10, 9, 1 };
+        string rollsString = "X X X X 9-X X X X X9/";
+        Assert.AreEqual(rollsString, ScoreDisplay.FormatRolls(rolls.ToList()));
+    }
+
 }
