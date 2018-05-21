@@ -5,7 +5,7 @@ using UnityEngine;
 using System.Linq;
 
 [TestFixture]
-public class ScoreMasterTest {
+public class ScoreDisplayTest {
 	
 	[Test]
 	public void T00PassingTest () {
