@@ -40,6 +40,29 @@ public class ScoreDisplay : MonoBehaviour {
     {
         string output = "";
 
+        for (int i = 0; i < rolls.Count; i++)
+        {
+            int box = output.Length + 1;                                            // Score box 1 to 21
+
+            if (rolls[i] == 0)                                                      // Always enter 0 as -
+            {
+                output += "-";
+            } else if (box % 2 == 0 && rolls[i - 1] + rolls[i] == 10)               // SPARE anywhere
+
+                {
+                    output += "/";
+                } else if (box >= 19 && rolls[i] == 10)                             // STRIKE in frame 10
+                {
+                    output += "X";
+                } else if (rolls[i] == 10)                                          // STRIKE in frame 1-9
+                    {
+                        output += "X ";
+                    } else
+                        {
+                            output += rolls[i].ToString();                          // Normal 1-9 bowl   
+                        } 
+        }
+
         return output;
     }
 }
