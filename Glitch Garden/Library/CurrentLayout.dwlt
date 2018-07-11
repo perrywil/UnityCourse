@@ -370,18 +370,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/_Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 82
   m_LastFolders:
-  - Assets/_Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: 82
   m_LastProjectPath: C:\Users\William\Documents\GitHub\repo\UnityCourse\Glitch Garden
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 1}
-    m_SelectedIDs: c0270000
-    m_LastClickedID: 10176
+    m_SelectedIDs: 80270000
+    m_LastClickedID: 10112
     m_ExpandedIDs: 00000000062500001a270000f028000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -526,9 +526,9 @@ MonoBehaviour:
     height: 480
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4a2f0000
-    m_LastClickedID: 12106
-    m_ExpandedIDs: e4ecfffffaf3ffffe2fbffff000000004a2f0000
+    m_SelectedIDs: 68060000
+    m_LastClickedID: 0
+    m_ExpandedIDs: e2fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -547,7 +547,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - 01 b Options
+  - 02 Level_01
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -578,14 +578,14 @@ MonoBehaviour:
     width: 1138
     height: 480
   m_SceneLighting: 1
-  lastFramingTime: 444.64482719541894
+  lastFramingTime: 4888.1959664531105
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 640, y: 400, z: 0}
+    m_Target: {x: 5, y: 3, z: 0.5}
     speed: 2
-    m_Value: {x: 640, y: 400, z: 0}
+    m_Value: {x: 5, y: 3, z: 0.5}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -612,9 +612,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 944.94037
+    m_Target: 22.71748
     speed: 2
-    m_Value: 944.94037
+    m_Value: 22.71748
   m_Ortho:
     m_Target: 1
     speed: 2
